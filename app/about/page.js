@@ -309,7 +309,7 @@ export default function AboutPage() {
           </Link>
 
           <p className="text-[10px] leading-6 text-black/50">
-            © {new Date().getFullYear()} Bharti Creations Private Limited.
+            © 2026 Bharti Creations Private Limited.
             All rights reserved.
           </p>
 
