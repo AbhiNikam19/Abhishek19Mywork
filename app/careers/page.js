@@ -510,7 +510,7 @@ export default function CareersPage() {
         </Link>
 
         <p className="mt-5">
-          © {new Date().getFullYear()} Bharti Creations Pvt. Ltd. All rights reserved.
+         © 2026 Bharti Creations Pvt. Ltd. All rights reserved.
         </p>
 
         <p className="mt-2 text-xs tracking-wide text-gray-400">
