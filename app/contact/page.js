@@ -582,7 +582,7 @@ export default function ContactPage() {
 
         <div className="mx-auto mt-7 max-w-4xl border-t border-white/10 pt-6">
           <p className="text-xs text-gray-500">
-            © {new Date().getFullYear()} Bharti Creations Private Limited.
+            © 2026 Bharti Creations Pvt. Ltd. All rights reserved.
             All rights reserved.
           </p>
         </div>
