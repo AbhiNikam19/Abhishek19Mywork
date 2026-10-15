@@ -406,7 +406,7 @@ export default function Home() {
             className="h-14 w-auto max-w-[230px] bg-white p-1 object-contain"
           />
           <p className="mt-5 text-xs text-neutral-400">
-            © {new Date().getFullYear()} Bharti Creations Private Limited. All rights reserved.
+            © 2026 Bharti Creations Pvt. Ltd. All rights reserved.
           </p>
           <div className="mt-5 flex flex-wrap justify-start gap-x-6 gap-y-3 text-[10px] font-bold tracking-widest">
             <Link href="/" className="hover:text-blue-300">HOME</Link>
