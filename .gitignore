@@ -1,0 +1,9 @@
+# Ignore video files
+*.mp4
+public/*.mp4
+
+# Next.js
+.next/
+node_modules/
+next-env.d.ts
+*.tsbuildinfo
