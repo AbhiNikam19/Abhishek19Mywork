@@ -343,7 +343,7 @@ export default function Home() {
               ABOUT
             </Link>
             <Link href="/leadership" className="transition hover:text-[#2b6cb0]">
-              OUR LEADERSHIP TEAM
+              OUR LEADERSHIP
             </Link>
             <Link href="/careers" className="transition hover:text-[#2b6cb0]">
               CAREER
