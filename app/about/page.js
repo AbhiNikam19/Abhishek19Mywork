@@ -3,8 +3,6 @@
 
 import Link from "next/link";
 
-const BUNNY_LIBRARY_ID = "780194";
-
 const services = [
   {
     number: "01",
@@ -12,7 +10,7 @@ const services = [
     subtitle: "IDENTIFICATION & CARD SOLUTIONS",
     description:
       "Professional ID card printing solutions for businesses, institutions, offices and organisations.",
-    videoId: "3aae14ef-7e30-4eae-96ca-5970ee1303cd",
+    videoUrl: "https://res.cloudinary.com/nwl2znvj/video/upload/v1793359891/idsubhash.mp4",
     subject: "ID Cards Enquiry",
   },
   {
@@ -21,7 +19,7 @@ const services = [
     subtitle: "DIRECT-TO-FILM PRINTING",
     description:
       "DTF printing solutions, printing materials and equipment for modern custom printing requirements.",
-    videoId: "bd1a167f-66f8-48a2-a2ee-d8a5a8f60851",
+    videoUrl: "https://res.cloudinary.com/nwl2znvj/video/upload/v1793359886/dtfsubhash.mp4",
     subject: "DTF Services Enquiry",
   },
   {
@@ -30,17 +28,10 @@ const services = [
     subtitle: "ILLUMINATED DISPLAY SOLUTIONS",
     description:
       "LED frames and illuminated display solutions designed to make brands, products and messages stand out.",
-    videoId: "a0242835-9fc5-43b3-a2bd-02c86093677a",
+    videoUrl: "https://res.cloudinary.com/nwl2znvj/video/upload/v1793359893/ledsubhash.mp4",
     subject: "LED Services Enquiry",
   },
 ];
-
-function bunnyEmbedUrl(videoId) {
-  return (
-    `https://player.mediadelivery.net/embed/${BUNNY_LIBRARY_ID}/${videoId}` +
-    "?autoplay=true&muted=true&loop=true&preload=true&responsive=true&showControls=false"
-  );
-}
 
 export default function AboutPage() {
   return (
@@ -125,14 +116,18 @@ export default function AboutPage() {
         id="sales-team"
         className="relative isolate flex min-h-[380px] scroll-mt-24 items-center overflow-hidden bg-neutral-950 text-white md:min-h-[440px] lg:min-h-[470px]"
       >
-        <iframe
-          src={bunnyEmbedUrl("d972d309-5c1c-44fe-b32a-413aefd3759f")}
+        <video
+          src="https://res.cloudinary.com/nwl2znvj/video/upload/v1793359894/sales-ready.mp4"
           title="Bharti Creations Sales Team"
-          allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
-          allowFullScreen
-          loading="eager"
+          autoPlay
+          muted
+          loop
+          playsInline
+          controls={false}
+          preload="metadata"
+          disablePictureInPicture
           tabIndex={-1}
-          className="pointer-events-none absolute -z-20 border-0"
+          className="pointer-events-none absolute -z-20 border-0 object-cover"
           style={{
             top: "50%",
             left: "50%",
@@ -221,15 +216,19 @@ export default function AboutPage() {
                 className="group flex min-w-0 flex-col overflow-hidden border border-black/5 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl"
               >
                 <div className="relative aspect-[4/3] overflow-hidden bg-neutral-900">
-                  {/* Enlarged iframe to crop letterboxing around the video */}
-                  <iframe
-                    src={bunnyEmbedUrl(service.videoId)}
+                  {/* Cloudinary video with automatic muted looping playback */}
+                  <video
+                    src={service.videoUrl}
                     title={`${service.title} video`}
-                    allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
-                    allowFullScreen
-                    loading="eager"
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    controls={false}
+                    preload="metadata"
+                    disablePictureInPicture
                     tabIndex={-1}
-                    className="pointer-events-none absolute border-0"
+                    className="pointer-events-none absolute border-0 object-cover"
                     style={{
                       width: "max(100%, 177.78%)",
                       height: "max(100%, 133.33%)",
