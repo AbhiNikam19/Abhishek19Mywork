@@ -167,11 +167,19 @@ export default function LeadershipPage() {
 
       {/* SECTION 2: OUR CORE TEAM VIDEO */}
       <section className="relative isolate flex min-h-[520px] items-center overflow-hidden bg-gray-900 sm:min-h-[600px] lg:min-h-[680px]">
-        {/* FIX: ENLARGE AND CENTER VIDEO TO COVER THE ENTIRE SECTION */}
-        <iframe
-          src="https://player.mediadelivery.net/embed/780194/d773a918-c8f9-4e4b-b7d9-3c8ce7eabc97?autoplay=true&muted=true&loop=true&preload=true&responsive=true&showControls=false"
+        <video
+          src="https://res.cloudinary.com/nwl2znvj/video/upload/v1793359891/core.mp4"
           title="Bharti Creations Core Team"
-          className="pointer-events-none absolute -z-20 border-0"
+          autoPlay
+          muted
+          loop
+          playsInline
+          controls={false}
+          preload="metadata"
+          disablePictureInPicture
+          aria-hidden="true"
+          tabIndex={-1}
+          className="pointer-events-none absolute -z-20 border-0 object-cover"
           style={{
             position: "absolute",
             top: "50%",
@@ -180,11 +188,6 @@ export default function LeadershipPage() {
             height: "max(100%, 56.25vw)",
             transform: "translate(-50%, -50%)",
           }}
-          allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
-          allowFullScreen
-          loading="eager"
-          aria-hidden="true"
-          tabIndex={-1}
         />
 
         <div className="pointer-events-none absolute inset-0 -z-10 bg-black/15" />
